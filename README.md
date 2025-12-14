@@ -1,103 +1,106 @@
 # 📋 Cobalt-Zenith Attendance System (ລະບົບເຊັກຊື່ QR Code)
 
-A modern, Python-based School Attendance System built with **Tkinter**. This application allows teachers to scan student QR codes to record attendance, view history, analyze statistics, and export reports. The interface is localized for **Lao language** support.
+**ລະບົບເຊັກຊື່ນັກຮຽນອັດສະລິຍະ ດ້ວຍ QR Code (ພັດທະນາດ້ວຍ Python & Tkinter)**
+
+ໂປຣແກຣມນີ້ຖືກອອກແບບມາເພື່ອຊ່ວຍໃຫ້ອາຈານສາມາດຈັດການການເຊັກຊື່ໄດ້ຢ່າງວ່ອງໄວທັນໃຈ ຜ່ານການສະແກນ QR Code ຂອງນັກຮຽນ. ມີລະບົບຈັດການລາຍວິຊາ, ບັນທຶກປະຫວັດ, ແລະ ສ້າງລາຍງານເປັນ Excel ໄດ້ທັນທີ.
 
 ---
 
-## ✨ Features (ຟີເຈີຫຼັກ)
+## ✨ ຟີເຈີຫຼັກ (Key Features)
 
-### 👨‍🎓 Student Mode (ໂຫມດນັກຮຽນ)
-*   **QR Generator**: Students input their ID and Name to generate a personal QR Code.
-*   **Save/Show**: The QR Code can be displayed on mobile to be scanned by the teacher.
+### 👨‍🎓 1. ໂຫມດນັກຮຽນ (Student Mode)
+ສ້າງ QR Code ປະຈຳຕົວຂອງນັກຮຽນໄດ້ງ່າຍໆ ພຽງແຕ່ປ້ອນລະຫັດ ແລະ ຊື່.
 
-### 🎓 Teacher Mode (ໂຫມດອາຈານ)
-*   **Class Session Management**: Select Subject (Dropdown with Add/+ and Delete/- buttons) and Room Number.
-*   **QR Scanner (Webcam)**: Real-time scanning using the computer's webcam.
-*   **Image Upload Scan**: Option to upload a QR code image file for scanning.
-*   **Instant Feedback**: Visual and audio-style status updates (Success/Duplicate/Error).
+![Student Mode](screenshots/student_mode.png)
 
-### 📊 Attendance History (ປະຫວັດ & ລາຍງານ)
-*   **Daily Log**: View attendance records for the current day.
-*   **Filtering**: Filter history by **Subject** to see specific class attendance.
-*   **Data Management**: option to **Delete** specific records.
-*   **Export to Excel**: One-click export of attendance data to `.xlsx` files using Pandas.
+*   **QR Generator**: ສ້າງ QR Code ໄດ້ທັນທີ.
+*   **Save/Show**: ສາມາດຖ່າຍຮູບ QR Code ເກັບໄວ້ໃນມືຖືເພື່ອໄປສະແກນໄດ້.
 
-### 📈 Statistics (ສະຖິຕິ)
-*   **Visual Graphs**: Bar charts showing attendance counts per student for each subject.
-*   **Analytics**: Quickly identify top-attending students.
+### 🎓 2. ໂຫມດອາຈານ (Teacher Mode)
+ອາຈານສາມາດຈັດການຫ້ອງຮຽນ ແລະ ເປີດກ້ອງເພື່ອສະແກນໄດ້.
 
-### 🇱🇦 Localization
-*   **Lao Language**: Full UI support for Lao text (using `DokChampa` font).
-*   **Modern UI**: Dark-themed, clean interface using `ttk` styling.
+![Teacher Mode](screenshots/teacher_mode.png)
+
+*   **Class Session Management**: 
+    *   ເລືອກວິຊາ (Subject) ຈາກ Dropdown (ສາມາດກົດ + ເພື່ອເພີ່ມວິຊາ, ແລະ - ເພື່ອລົບວິຊາ).
+    *   ປ້ອນເລກຫ້ອງ (Room Number).
+*   **QR Scanner**:
+    *   **Start Scan**: ເປີດກ້ອງ Webcam ເພື່ອສະແກນ.
+    *   **Upload QR**: ອັບໂຫລດຮູບ QR Code ຈາກຄອມພິວເຕີ (ກໍລະນີນັກຮຽນສົ່ງຮູບມາໃຫ້).
+*   **Instant Feedback**: ມີສຽງ ແລະ ຂໍ້ຄວາມແຈ້ງເຕືອນເມື່ອສະແກນສຳເລັດ (ຫຼືແຈ້ງເຕືອນຖ້າສະແກນຊ້ຳ).
+
+### 📊 3. ປະຫວັດ & ລາຍງານ (History & Reports)
+ເບິ່ງຂໍ້ມູນຍ້ອນຫຼັງ ແລະ ວິເຄາະຜົນການເຂົ້າຮຽນ.
+
+![History Mode](screenshots/stats_mode.png)
+
+*   **Daily Log**: ຕາຕະລາງສະແດງລາຍຊື່ຄົນເຂົ້າຮຽນຂອງມື້ນີ້.
+*   **Filter System**: ສາມາດຄັດກອງ (Filter) ເບິ່ງສະເພາະວິຊາທີ່ຕ້ອງການໄດ້.
+*   **Delete Data**: ສາມາດລົບຂໍ້ມູນທີ່ແຖວທີ່ຕ້ອງການໄດ້.
+*   **Export Excel**: ກົດປุ่มສີຂຽວ **"Export Excel"** ເພື່ອດຶງຂໍ້ມູນອອກມາເປັນລາຍງານ (.xlsx) ໄດ້ທັນທີ.
+
+### 📈 4. ສະຖິຕິ (Statistics)
+*   **Visual Graphs**: ສະແດງກຣາຟແທ່ງ ປຽບທຽບຈຳນວນການເຂົ້າຮຽນຂອງນັກຮຽນແຕ່ລະຄົນ ໃນແຕ່ລະວິຊາ.
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+## 🛠️ ເທັກໂນໂລຢີທີ່ໃຊ້ (Tech Stack)
 
-The project is built using **Python 3.12+** and the following powerful libraries:
+ໂປຣແກຣມນີ້ສ້າງດ້ວຍ **Python 3.12+** ແລະ ໃຊ້ Library ດັ່ງນີ້:
 
-| Library | Purpose |
+| Library | ໜ້າທີ່ (Purpose) |
 | :--- | :--- |
-| **tkinter** | Built-in GUI framework (Modernized with `ttk`). |
-| **opencv-python** | Accessing webcam and processing video frames. |
-| **pyzbar** | Decoding QR codes from images and video streams. |
-| **qrcode[pil]** | Generating QR codes for students. |
-| **Pillow** | Image manipulation for GUI display. |
-| **matplotlib** | Rendering bar charts and statistics graphs. |
-| **pandas** | Data handling and exporting to Excel. |
-| **openpyxl** | Engine for writing `.xlsx` files. |
-| **sqlite3** | Built-in database for storing records. |
+| **tkinter** | ສ້າງໜ້າຕາໂປຣແກຣມ (GUI) |
+| **opencv-python** | ເປີດກ້ອງ Webcam |
+| **pyzbar** | ອ່ານ ແລະ ແປຜົນ QR Code |
+| **qrcode[pil]** | ສ້າງຮູບ QR Code |
+| **Pillow** | ຈັດການຮູບພາບໃນໂປຣແກຣມ |
+| **matplotlib** | ສ້າງກຣາຟສະແດງຜົນ |
+| **pandas** | ຈັດການຂໍ້ມູນ ແລະ Export ເປັນ Excel |
+| **openpyxl** | ຂຽນຂໍ້ມູນລົງໄຟລ໌ .xlsx |
+| **sqlite3** | ຖານຂໍ້ມູນ (Database) |
 
 ---
 
-## 🚀 Installation & Setup
+## 🚀 ວິທີການຕິດຕັ້ງ (Installation)
 
-1.  **Clone the Repository**
+1.  **Clone ໂປຣເຈັກ**:
     ```bash
     git clone https://github.com/yourusername/cobalt-zenith.git
     cd cobalt-zenith
     ```
 
-2.  **Install Dependencies**
-    Ensure you have Python installed. Then run:
+2.  **ຕິດຕັ້ງ Library**:
+    ກະລຸນາຕິດຕັ້ງ Python ກ່ອນ, ຈາກນັ້ນລັນຄຳສັ່ງ:
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Run the Application**
+3.  **ລັນໂປຣແກຣມ**:
     ```bash
     python main.py
     ```
 
 ---
 
-## 📁 Project Structure
+##  ຄູ່ມືການໃຊ້ງານເບື້ອງຕົ້ນ
 
-*   `main.py`: The core application entry point. Contains all GUI logic, camera handling, and event loops.
-*   `backend.py`: Handles SQLite database operations (CRUD) and core business logic.
-*   `requirements.txt`: List of all Python packages required.
-*   `attendance.db`: (Auto-generated) SQLite database file storing subjects and check-in records.
-
----
-
-## 📝 Usage Guide
-
-1.  **First Time Setup**:
-    *   Open **Teacher Mode**.
-    *   Click the `+` button next to "Subject" to add your subjects (e.g., Math, Science).
-2.  **Student Registration**:
-    *   Go to **Student Mode**.
-    *   Enter ID and Name -> Click "Generate QR".
-    *   Save or take a photo of this QR.
-3.  **Taking Attendance**:
-    *   Teacher selects Subject and Room.
-    *   Click **Start Scan** (Camera) or **Upload QR**.
-    *   Scan student QRs.
-4.  **Reporting**:
-    *   Go to **History** to view today's list.
-    *   Use the Filter dropdown to see specific classes.
-    *   Click **Export Excel** to save the report.
+1.  **ຕັ້ງຄ່າວິຊາຮຽນ**:
+    *   ເຂົ້າ **Teacher Mode**.
+    *   ກົດປຸ່ມ `+` ທາງຂວາຂອງຊ່ອງ Subject ເພື່ອເພີ່ມວິຊາ (ເຊັ່ນ: Math, English).
+2.  **ສ້າງບັດນັກຮຽນ**:
+    *   ເຂົ້າ **Student Mode**.
+    *   ປ້ອນລະຫັດ ແລະ ຊື່ -> ກົດ "Create QR".
+3.  **ເລີ່ມເຊັກຊື່**:
+    *   ອາຈານເລືອກວິຊາ ແລະ ຫ້ອງ.
+    *   ກົດ **Start Scan** -> ໃຫ້ນັກຮຽນເອົາ QR ມາສ່ອງທີ່ກ້ອງ.
+4.  **ດຶງລາຍງານ**:
+    *   ເຂົ້າ **History**.
+    *   ເລືອກວິຊາທີ່ຕ້ອງການ -> ກົດ Filter.
+    *   ກົດ **Export Excel** ເພື່ອຈົບວຽກ.
 
 ---
 
-**Note**: This application is optimized for Windows and uses the `DokChampa` font for Lao language rendering.
+**ໝາຍເຫດ**: 
+*   ຮອງຮັບການສະແດງຜົນພາສາລາວ (Lao Language Support) ດ້ວຍຟອນ **DokChampa**.
+*   ທົດສອບບົນລະບົບ Windows (OS Version: windows).
